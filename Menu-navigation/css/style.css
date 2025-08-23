@@ -1,4 +1,3 @@
-/* css reset  */
 /* Reset CSS */
 *,
 *::before,
@@ -83,4 +82,31 @@ img {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+}
+
+/* right nav */
+
+.right_nav {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  width: 20%;
+  gap: 2.5rem;
+}
+.group_icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.user_section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.profile_user {
+  width: 50px;
+  height: 50px;
+}
+.profile_user img {
+  border-radius: 100%;
 }
