@@ -20,7 +20,7 @@ video,
 canvas,
 svg {
   display: block;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 input,
@@ -49,9 +49,9 @@ img {
   margin: 0 auto;
 }
 .section_nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 17% 50% 32%;
   justify-content: space-between;
-  width: 100%;
   background-color: #fff;
   height: 100px;
   margin-top: 1rem;
@@ -72,10 +72,20 @@ img {
 .box-img-logo {
   min-width: 50px;
 }
+.box-img-logo h3 {
+  font-size: 12rem;
+  color: red;
+}
 /* navbar link  */
-
+.active {
+  background-image: linear-gradient(71deg, #3ac2ff 50%, #2f56ff);
+  color: #fff;
+  padding: 12px;
+  border-radius: 22px;
+  font-weight: bold;
+}
 .center_nav {
-  width: 50%;
+  /* width: 50%; */
 }
 .center_nav ul {
   display: flex;
@@ -88,15 +98,23 @@ img {
 
 .right_nav {
   display: flex;
+  justify-content: end;
   align-items: center;
-  /* justify-content: space-between; */
-  width: 20%;
-  gap: 2.5rem;
+  /* gap: 2.5rem; */
 }
 .group_icons {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-right: 2rem;
+}
+.status-connection {
+  width: 57px;
+  color: #1f927f;
+  background-color: #edfdfa;
+  padding: 0.4rem;
+  border-radius: 5px;
+  text-align: center;
 }
 .user_section {
   display: flex;
@@ -109,4 +127,47 @@ img {
 }
 .profile_user img {
   border-radius: 100%;
+}
+
+@media screen and (max-width: 999px) {
+  .box-img-logo {
+    min-width: 36px;
+  }
+  .section-logo h3 {
+    font-size: 0.8rem;
+  }
+  .section-logo {
+    font-size: 0.9rem;
+  }
+  .center_nav ul li a {
+    font-size: 0.8rem;
+  }
+  .active {
+    padding: 6px;
+  }
+  .group_icons {
+    gap: 1rem;
+    margin-right: 1rem;
+  }
+  .group_icons a svg {
+    width: 13px;
+  }
+  .status-connection {
+    width: 57px;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+  .profile_user {
+    width: 40px;
+    height: 40px;
+  }
+  /* .section_nav {
+    grid-template-columns: 13% 42% 24%;
+  } */
+}
+
+@media screen and (max-width: 768px) {
+  .center_nav {
+    display: none;
+  }
 }
