@@ -223,3 +223,23 @@ img {
     transition: all 260ms ease-out;
   }
 }
+@media screen and (max-width: 576px) {
+  .section_nav {
+    grid-template-columns: 32% 57% 3%;
+  }
+  .section-logo h3 {
+    font-size: 0.7rem;
+  }
+  .status-connection {
+    display: none;
+  }
+  .profile_user::before {
+    content: "";
+
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #1f927f;
+    border-radius: 50%;
+  }
+}
