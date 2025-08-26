@@ -20,7 +20,7 @@ video,
 canvas,
 svg {
   display: block;
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 input,
@@ -36,8 +36,9 @@ a {
 }
 
 ul,
-ol {
-  list-style: none;
+ol,
+li {
+  list-style: none ;
 }
 img {
   width: 100%;
