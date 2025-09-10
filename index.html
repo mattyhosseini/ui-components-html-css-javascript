@@ -1,13 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ui-components-html-css-javascript</title>
-</head>
-<body>
-    <div>
-        <a href="./Menu-navigation/index.html">Navigation menu</a>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ستون و سطر حلقه‌ای گروهی</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background: #f0f2f5;
+        direction: rtl;
+        padding: 2rem;
+      }
+      .grid {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        height: 600px;
+        overflow: hidden;
+        max-width: 1200px;
+        margin: auto;
+        position: relative;
+      }
+      .column {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+      }
+      .column-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .grid-item {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        min-height: 100px;
+        cursor: pointer;
+        position: relative;
+        transition: transform 0.1s linear;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="column" id="column1">
+        <div class="column-wrapper">
+          <div class="grid-item">آیتم ۱</div>
+          <div class="grid-item">آیتم ۵</div>
+          <div class="grid-item">آیتم ۹</div>
+          <div class="grid-item">آیتم ۱۳</div>
+          <div class="grid-item">آیتم ۱۷</div>
+          <div class="grid-item">آیتم ۲۱</div>
+        </div>
+      </div>
+      <div class="column" id="column2">
+        <div class="column-wrapper">
+          <div class="grid-item">آیتم ۲</div>
+          <div class="grid-item">آیتم ۶</div>
+          <div class="grid-item">آیتم ۱۰</div>
+          <div class="grid-item">آیتم ۱۴</div>
+          <div class="grid-item">آیتم ۱۸</div>
+          <div class="grid-item">آیتم ۲۲</div>
+        </div>
+      </div>
+      <div class="column" id="column3">
+        <div class="column-wrapper">
+          <div class="grid-item">آیتم ۳</div>
+          <div class="grid-item">آیتم ۷</div>
+          <div class="grid-item">آیتم ۱۱</div>
+          <div class="grid-item">آیتم ۱۵</div>
+          <div class="grid-item">آیتم ۱۹</div>
+          <div class="grid-item">آیتم ۲۳</div>
+        </div>
+      </div>
+      <div class="column" id="column4">
+        <div class="column-wrapper">
+          <div class="grid-item">آیتم ۴</div>
+          <div class="grid-item">آیتم ۸</div>
+          <div class="grid-item">آیتم ۱۲</div>
+          <div class="grid-item">آیتم ۱۶</div>
+          <div class="grid-item">آیتم ۲۰</div>
+          <div class="grid-item">آیتم ۲۴</div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
