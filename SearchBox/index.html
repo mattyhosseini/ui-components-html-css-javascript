@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search Box</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <!-- css reset -->
     <link rel="stylesheet" href="./css/reaset.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -14,6 +18,14 @@
     />
   </head>
   <body>
-
+    <div class="search_box">
+      <input type="checkbox" id="check" hidden />
+      <div class="search_box_content">
+        <input type="text" placeholder="Type here..." />
+        <label for="check">
+          <i class="fa fa-search"></i>
+        </label>
+      </div>
+    </div>
   </body>
 </html>
