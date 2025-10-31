@@ -3,30 +3,92 @@ let rightEye = document.querySelector('.righteye')
 let userInput = document.getElementById('userInput')
 let passwordInput = document.getElementById('passInput')
 
-let leftEyeLeft = 75
+let leftEyeLeft = 122
 let leftEyeTop = 75
 let leftEyePaddingLeft = 0
 let leftEyePaddingTop = 0
 
-let rightEyeLeft = 75
+let rightEyeLeft = 200
 let rightEyeTop = 75
 let rightEyePaddingLeft = 0
 let rightEyePaddingTop = 0
 
 const userInputFocus = () => {
   console.log('userInputFocus')
+  let eyePosition = setInterval(() => {
+    if (leftEyePaddingTop === 10) {
+      clearInterval(eyePosition)
+    }
+    leftEye.style.paddingTop = leftEyePaddingTop + 'px'
+    leftEye.style.left = leftEyeLeft + 'px'
+
+    rightEye.style.paddingTop = rightEyePaddingTop + 'px'
+    rightEye.style.left = rightEyeLeft + 'px'
+
+    leftEyePaddingTop++
+    rightEyePaddingTop++
+
+    leftEyeLeft--
+    rightEyeLeft--
+  }, 10)
 }
 const userInputBlur = () => {
   console.log('userInputBlur')
+  let eyePosition = setInterval(() => {
+    if (leftEyePaddingTop === 0) {
+      clearInterval(eyePosition)
+    }
+    leftEye.style.paddingTop = leftEyePaddingTop + 'px'
+    leftEye.style.left = leftEyeLeft + 'px'
+
+    rightEye.style.paddingTop = rightEyePaddingTop + 'px'
+    rightEye.style.left = rightEyeLeft + 'px'
+
+    leftEyePaddingTop--
+    rightEyePaddingTop--
+
+    leftEyeLeft++
+    rightEyeLeft++
+  }, 10)
 }
 const userKeyHandler = () => {
   console.log('userKeyHandler')
 }
 const passInputFocus = () => {
   console.log('passInputFocus')
+  const eyePosition = setInterval(() => {
+    if (leftEyeTop === 60) {
+      clearInterval(eyePosition)
+    }
+    leftEye.style.top = leftEyeTop + 'px'
+    leftEye.style.left = leftEyeLeft + 'px'
+
+    rightEye.style.top = rightEyeTop + 'px'
+    rightEye.style.left = rightEyeLeft + 'px'
+
+    leftEyeTop--
+    rightEyeTop--
+    leftEyeLeft++
+    rightEyeLeft++
+  }, 20)
 }
 const passInputBlur = () => {
   console.log('passInputBlur')
+  const eyePosition = setInterval(() => {
+    if (leftEyeTop === 75) {
+      clearInterval(eyePosition)
+    }
+    leftEye.style.top = leftEyeTop + 'px'
+    leftEye.style.left = leftEyeLeft + 'px'
+
+    rightEye.style.top = rightEyeTop + 'px'
+    rightEye.style.left = rightEyeLeft + 'px'
+
+    leftEyeTop++
+    rightEyeTop++
+    leftEyeLeft--
+    rightEyeLeft--
+  }, 20)
 }
 
 userInput.addEventListener('focus', userInputFocus)
