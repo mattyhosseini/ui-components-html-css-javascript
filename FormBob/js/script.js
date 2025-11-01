@@ -51,8 +51,25 @@ const userInputBlur = () => {
     rightEyeLeft++
   }, 10)
 }
-const userKeyHandler = () => {
-  console.log('userKeyHandler')
+const userKeyHandler = (event) => {
+  if (event.key === 'Backspace' && leftEyeLeft > 110) {
+    leftEye.style.left = leftEyeLeft + 'px'
+    rightEye.style.left = rightEyeLeft + 'px'
+    leftEyeLeft--
+    rightEyeLeft--
+    console.log('sllllllllllllllllllll');
+    
+    return
+
+  }
+  if (leftEyeLeft <= 137) {
+    leftEye.style.left = leftEyeLeft + 'px'
+    rightEye.style.left = rightEyeLeft + 'px'
+    leftEyeLeft++
+    rightEyeLeft++
+  }
+
+  console.log('userKeyHandler', event)
 }
 const passInputFocus = () => {
   console.log('passInputFocus')
@@ -93,6 +110,6 @@ const passInputBlur = () => {
 
 userInput.addEventListener('focus', userInputFocus)
 userInput.addEventListener('blur', userInputBlur)
-userInput.addEventListener('keypress', userKeyHandler)
+userInput.addEventListener('keydown', userKeyHandler)
 passwordInput.addEventListener('focus', passInputFocus)
 passwordInput.addEventListener('blur', passInputBlur)
